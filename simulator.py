@@ -8,7 +8,7 @@ import traceback
 TIME = 16
 MAX_PTS = 68
 
-from new import New
+from bot import Bot
 
 class TimedOutExc(Exception):
 	pass
@@ -348,7 +348,7 @@ if __name__ == '__main__':
 
 	if len(sys.argv) != 2:
 		print 'Usage: python simulator.py <option>'
-		print '<option> can be 1 => Random player vs. Random player'
+		print '<option> can be 1 => Random player vs. Bot'
 		print '                2 => Human vs. Random Player'
 		print '                3 => Human vs. Human'
 		sys.exit(1)
@@ -358,7 +358,7 @@ if __name__ == '__main__':
 	option = sys.argv[1]	
 	if option == '1':
 		obj1 = Random_Player()
-		obj2 = New()
+		obj2 = Bot()
 
 	elif option == '2':
 		obj1 = Random_Player()
